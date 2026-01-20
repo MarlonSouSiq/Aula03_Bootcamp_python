@@ -103,7 +103,10 @@ while True:
     try:
         salario=input("Entre com o seu salario:")
         salariook=float(salario.replace(",","."))
-        break
+        if salariook <= 0:
+            print("Digite um valor maior que zero")
+        else:
+            break
     except ValueError:
         print("Digitar um número")
 
